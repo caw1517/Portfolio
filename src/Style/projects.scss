@@ -1,0 +1,120 @@
+$pri-color: #301E67;
+$sec-color: #5B8FB9;
+$accent-color: #55AACF;
+$dark-color: #03001C;
+
+.Projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+
+    h2 {
+        font-size: 3rem;
+        background: #2F6571;
+        background: linear-gradient(to right, #2F6571 0%, #53A8CB 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+
+    .ProjectGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+.Card {
+    width: 400px;
+    height: 400px;
+    background-color: $sec-color;
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 2rem;
+    perspective: 1000px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.Card.flipped {
+    transform: rotateY(180deg)
+}
+
+.CardFront,
+.CardBack {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: 2rem;
+        color: #fff;
+    }
+}
+
+.CardFront {
+
+    justify-content: space-evenly;
+
+    .CardLanguages {
+        display: flex;
+        gap: 2rem;
+
+        .Icon {
+            color: #fff;
+            font-size: 35px;
+        }
+    }
+
+    img {
+        width: 100%;
+        padding: 1px 10px;
+    }
+}
+
+.CardBack {
+    transform: rotateY(180deg);
+    justify-content: center;
+    gap: 2rem;
+
+    p {
+        color: white;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .BackIcons {
+        display: flex;
+        gap: 1rem;
+
+        .IconBlock {
+            display: flex;
+            flex-direction: column;
+
+            .Icon {
+                color: white;
+                font-size: 2rem;
+            }
+
+            p {
+                padding: 12px 0;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+                transition: all ease 0.5s;
+            }
+        }
+    }
+}

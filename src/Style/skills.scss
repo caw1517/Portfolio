@@ -1,0 +1,83 @@
+$pri-color: #301E67;
+$sec-color: #5B8FB9;
+$accent-color: #55AACF;
+$dark-color: #03001C;
+
+.Skills {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 3rem;
+        background: #2F6571;
+        background: linear-gradient(to right, #2F6571 0%, #53A8CB 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+
+    p {
+        color: white;
+        text-align: center;
+        width: 620px;
+    }
+
+    .SkillIcons {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeate(2, 1fr);
+        column-gap: 100px;
+        row-gap: 45px;
+
+        .Icon {
+            color: white;
+            font-size: 55px;
+        }
+    }
+
+    a {
+        margin: 3rem;
+        padding: 1rem 4rem;
+        background: $accent-color;
+        border: 0px;
+        border-radius: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 5rem;
+        p {
+            width: 450px;
+        }
+
+        .SkillIcons {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        h2 {
+            font-size: 2rem;
+        }
+        
+        p {
+            width: 275px;
+        }
+
+        .SkillIcons {
+            column-gap: 20px;
+            row-gap: 25px;
+        }
+    }
+
+    @media screen and (max-width: 365px) {
+        a {
+            padding: 1rem 3rem;
+        }
+    }
+}

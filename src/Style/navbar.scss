@@ -1,0 +1,126 @@
+$pri-color: #301E67;
+$sec-color: #5B8FB9;
+$accent-color: #B6EADA;
+$dark-color: #03001C;
+
+
+/* || NAVBAR || */
+
+.Active {
+    background-color: rgba(0, 0, 0, 0.733);
+    transition: 0.8s ease all;
+}
+
+.Navbar {
+    transition: 0.8s ease all;
+    z-index: 7;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 25rem;
+    height: 70px;
+
+    ul {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 0;
+        
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: white;
+                transition: ease 0.2s all;
+
+
+                &:hover {
+                    transition: ease 0.5s all;
+                    color: $sec-color;
+                }
+
+                .icon {
+                    font-size: 35px;
+                    transition: ease 0.5s all;
+
+
+                    &:hover {
+                        color: $sec-color;
+                        transition: ease 0.5s all;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1650px) {
+        padding: 0 10rem;
+    }
+
+    @media screen and (max-width: 1280px)
+    {
+        padding: 0rem 4rem;
+    }
+}
+
+/* || Mobile Nav || */
+.MobileNav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .MobileIcon {
+        color: white;
+        font-size: 30px;
+        z-index: 3;
+    }
+
+    ul {
+        display: flex;
+        gap: 1.5rem;
+        li {
+            list-style: none;
+            text-decoration: none;
+            z-index: 3;
+        }
+    }
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.MobileNavMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        list-style: none;
+
+        li {
+            
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 22px;
+                font-weight: 400;
+            }
+        }
+    }
+}

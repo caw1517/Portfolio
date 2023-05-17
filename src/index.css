@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  background: rgb(3,0,28);
+  background: linear-gradient(124deg, rgba(3,0,28,1) 0%, rgba(48,30,103,1) 100%);
+}
