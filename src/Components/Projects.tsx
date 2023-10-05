@@ -14,6 +14,7 @@ export default function Projects() {
 
             <div className="ProjectGrid">
                 <Card />
+                <Card />
             </div>
         </div>
     )

@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import Hero from './Pages/Hero';
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
+import Contact from './Components/Contact';
 
 //Function to get screen width for displaying correct navbar
 function getCurrentDimensions() {
@@ -33,6 +34,7 @@ function App() {
       <Hero />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   );
 }
