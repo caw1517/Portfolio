@@ -17,7 +17,7 @@
         background: #2F6571;
         background: linear-gradient(to right, #2F6571 0%, #53A8CB 100%);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent;
     }
 
     p {
@@ -25,16 +25,34 @@
         font-size: 22px;
         text-align: center;
         font-weight: 700;
+
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+            padding: 1rem;
+        }
     }
 
     .FormContainer {
         width: 50%;
         padding: 1rem;
 
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+            
+
         .Name {
             width: 100%;
             display: flex;
             justify-content: space-between;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+
+                .FirstName, .LastName {
+                    width: 100%;
+                }
+            }
         }
 
         .FirstName, .LastName, .Email, .Subject, .Message, .Submit {
